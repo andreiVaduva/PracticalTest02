@@ -39,9 +39,11 @@ public class CommunicationThread extends Thread {
                 HttpEntity httpGetEntity = httpGetResponse.getEntity();
                 if (httpGetEntity != null) {
                     // do something with the response
-                    Log.i(Constants.TAG, EntityUtils.toString(httpGetEntity));
+                    String result = EntityUtils.toString(httpGetEntity);
+                    Log.i(Constants.TAG, "[MESAJ]" + result);
 
-                    String result = httpGetEntity.toString();
+
+//                    String result = httpGetEntity.toString();
                     printWriter.println(result);
                     printWriter.flush();
                 } else {
