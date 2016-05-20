@@ -23,11 +23,9 @@ public class ClientThread extends Thread {
     public ClientThread(
             String address,
             int port,
-//            String city,
             TextView timeTextView) {
         this.address = address;
         this.port = port;
-//        this.city = city;
         this.timeTextView = timeTextView;
     }
 
