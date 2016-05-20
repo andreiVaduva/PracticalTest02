@@ -40,9 +40,8 @@ public class ClientThread extends Thread {
             BufferedReader bufferedReader = Utilities.getReader(socket);
             PrintWriter printWriter = Utilities.getWriter(socket);
             if (bufferedReader != null && printWriter != null) {
-//                printWriter.println(city);
-//                printWriter.flush();
                 printWriter.println("TESTING...");
+                printWriter.flush();
                 String timeInformation;
                 while ((timeInformation = bufferedReader.readLine()) != null) {
                     final String finalizedTimeInformation = timeInformation;
